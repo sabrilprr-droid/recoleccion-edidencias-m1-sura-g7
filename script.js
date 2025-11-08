@@ -74,7 +74,7 @@ console.log("=== MENU VIDA SANA ===\n1. Ingresar Peso\n2. Ingresar Altura\n3. Ca
     if (bmi < 18.5) {
       console.log("Clasificación según IMC: Bajo peso");
     } else if (bmi >= 18.5 && bmi < 24.9) {
-      console.log("Clasificación según IMC: Peso normal");
+      console.log("Clasificación según IMC: Peso normal"); //clasificacion bmi
     } else if (bmi >= 25 && bmi < 29.9) {
       console.log("Clasificación según IMC: Sobrepeso");
     } else {

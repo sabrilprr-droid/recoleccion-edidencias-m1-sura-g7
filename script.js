@@ -44,10 +44,10 @@ console.log("=== MENU VIDA SANA ===\n1. Ingresar Peso\n2. Ingresar Altura\n3. Ca
 
     case "3":
       if (!isNaN(peso) && !isNaN(altura)) {
-    let resultadoIndiceMasaCorporalCalculadoConPesoYAltura = peso / (altura * altura);
+    let resultadoIndiceMasaCorporalCalculadoConPesoYAltura = peso / (altura * altura); //es la formula para hallar el imc
     bmi = resultadoIndiceMasaCorporalCalculadoConPesoYAltura;
 
-    let valorIndiceMasaCorporalRedondeadoDosDecimales = Math.round(bmi * 100) / 100;
+    let valorIndiceMasaCorporalRedondeadoDosDecimales = Math.round(bmi * 100) / 100; // se utiliza para mostras solo dos decimales  
     console.log("Tu índice de masa corporal (IMC) es: " + valorIndiceMasaCorporalRedondeadoDosDecimales);
   } else {
     console.log("No se puede calcular el índice de masa corporal (IMC). Asegúrate de haber ingresado peso y altura válidos.");
@@ -55,7 +55,34 @@ console.log("=== MENU VIDA SANA ===\n1. Ingresar Peso\n2. Ingresar Altura\n3. Ca
       break;
 
     case "4":
-     
+     if (!isNaN(peso)) {
+    console.log("Peso ingresado por el usuario en kilogramos: " + peso);
+  } else {
+    console.log("El peso aún no ha sido ingresado o es inválido.");
+  }
+
+  if (!isNaN(altura)) {
+    console.log("Altura ingresada por el usuario en metros: " + altura);
+  } else {
+    console.log("La altura aún no ha sido ingresada o es inválida.");
+  }
+
+  if (!isNaN(bmi)) {
+    let valorIndiceMasaCorporalRedondeadoDosDecimales = Math.round(bmi * 100) / 100;
+    console.log("Índice de masa corporal (IMC) calculado: " + valorIndiceMasaCorporalRedondeadoDosDecimales);
+
+    if (bmi < 18.5) {
+      console.log("Clasificación según IMC: Bajo peso");
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+      console.log("Clasificación según IMC: Peso normal");
+    } else if (bmi >= 25 && bmi < 29.9) {
+      console.log("Clasificación según IMC: Sobrepeso");
+    } else {
+      console.log("Clasificación según IMC: Obesidad");
+    }
+  } else {
+    console.log("El IMC aún no ha sido calculado.");
+  }
       break;
 
     case "5":

@@ -26,6 +26,19 @@ console.log("=== MENU VIDA SANA ===\n1. Ingresar Peso\n2. Ingresar Altura\n3. Ca
       break;
 
     case "2":
+        let entradaTextoAlturaIngresadaPorUsuarioEnMetros = prompt("Ingresa tu altura en metros (ejemplo: 1.75)(recuerda que es con (.)):");
+  let valorNumericoAlturaIngresadaPorUsuarioEnMetros = Number(entradaTextoAlturaIngresadaPorUsuarioEnMetros);
+
+  if (!isNaN(valorNumericoAlturaIngresadaPorUsuarioEnMetros)) {
+    if (valorNumericoAlturaIngresadaPorUsuarioEnMetros > 0.5 && valorNumericoAlturaIngresadaPorUsuarioEnMetros < 3) {
+      altura = valorNumericoAlturaIngresadaPorUsuarioEnMetros;
+      console.log("Altura guardada correctamente.");
+    } else {
+      console.log("Dato inválido. La altura debe ser mayor a 0.5 y menor a 3 metros.");
+    }
+  } else {
+    console.log("Entrada inválida. Debes ingresar un número.");
+  }
       
       break;
 
